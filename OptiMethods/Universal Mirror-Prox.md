@@ -62,14 +62,14 @@ $$ \eta_{t}=D / \sqrt{G_{0}^{2}+\sum_{\tau=1}^{t-1} Z_{\tau}^{2}}, \quad \text {
 ---
 
 **Algorithm Universal Mirror-Prox**  
-**Input:** #Iterations $T$, $y_{0}=\arg \min _{x \in \mathcal{X}} \mathcal{R}(x)$, learning rate $\{\eta_{t}\}_{t}$  
+**Input:** #Iterations $T$, $y_{0}=\arg\min_{x\in\mathcal{X}}\mathcal{R}(x)$, learning rate $\{\eta_{t}\}_{t}$  
 **for** $t=1 \ldots T$ **do**  
-&emsp;&emsp; Set $M_{t}=F\left(y_{t-1}\right)$  
+&emsp;&emsp; Set $M_{t}=F(y_{t-1})$  
 &emsp;&emsp; Updated:  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$ x_{t} \leftarrow \underset{x \in \mathcal{K}}{\arg \min } M_{t} \cdot x+\frac{1}{\eta_{t}} \mathcal{D}_{\mathcal{R}}\left(x, y_{t-1}\right), \quad \text { and define } g_{t} :=F\left(x_{t}\right) $  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$y_{t} \leftarrow \underset{x \in \mathcal{K}}{\arg \min } g_{t} \cdot x+\frac{1}{\eta_{t}} \mathcal{D}_{\mathcal{R}}\left(x, y_{t-1}\right) $  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$x_{t}\leftarrow\underset{x\in\mathcal{K}}{\arg\min} M_{t} \cdot x+\frac{1}{\eta_{t}}\mathcal{D}_{\mathcal{R}}(x, y_{t-1}), \quad\text{and define } g_{t}:=F(x_{t})$  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$y_{t}\leftarrow\underset{x\in\mathcal{K}}{\arg\min} g_{t} \cdot x+\frac{1}{\eta_{t}}\mathcal{D}_{\mathcal{R}}(x, y_{t-1})$  
 **end for**  
-**Output:** $\overline{x}_{T}=\frac{1}{T} \sum_{t=1}^{T} x_{t}$  
+**Output:** $\overline{x}_{T}=\frac{1}{T}\sum_{t=1}^{T}x_{t}$  
   
 
 
