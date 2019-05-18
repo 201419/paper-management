@@ -54,7 +54,7 @@ $$ \Delta\left(x, x_{0}\right) :=\phi\left(u, v_{0}\right)-\phi\left(u_{0}, v\ri
 ### 3. Universal Mirror-Prox
 
 `Rakhlin and Sridharan (2013)`[^2] suggest to apply the following learning rate scheme inside Optimistic OGD 
-$$ \eta_{t}=D / \max \left\{\sqrt{\sum_{t=1}^{t-1}\left\|g_{t}-M_{t}\right\|^{2}}+\sqrt{\sum_{t=1}^{t-2}\left\|g_{t}-M_{t}\right\|^{2}}, 1\right\} $$
+$$ \eta_{t}=D / \max \{\sqrt{\sum_{t=1}^{t-1}\|g_{t}-M_{t}\|^{2}}+\sqrt{\sum_{t=1}^{t-2}\|g_{t}-M_{t}\|^{2}}, 1\} $$
 
 We suggest to use the following adaptive scheme
 $$ \eta_{t}=D / \sqrt{G_{0}^{2}+\sum_{\tau=1}^{t-1} Z_{\tau}^{2}}, \quad \text { where } Z_{\tau}^{2} :=\frac{\left\|x_{\tau}-y_{\tau}\right\|^{2}+\left\|x_{\tau}-y_{\tau-1}\right\|^{2}}{5 \eta_{\pi}^{2}} $$
@@ -74,4 +74,5 @@ $$ \eta_{t}=D / \sqrt{G_{0}^{2}+\sum_{\tau=1}^{t-1} Z_{\tau}^{2}}, \quad \text {
 
 
 [^1]: Nemirovski, A. (2004). Prox-method with rate of convergence O(1/t) for variational inequalities with lipschitz continuous monotone operators and smooth convex-concave saddle point problems. SIAM Journal on Optimization, 15(1):229–251.
+
 [^2]: Rakhlin, S. and Sridharan, K. (2013). Optimization, learning, and games with predictable sequences. In Advances in Neural Information Processing Systems, pages 3066–3074.

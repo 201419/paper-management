@@ -37,7 +37,7 @@ In stochastic rounding, numbers are rounded up or down at random such that $\mat
 Explicitly, suppose we allocate $W$ bits to represent the quantized number and allocate $F$ of the $W$ bits to represent the fractional part (小数部分) of the number. The quantization gap (相邻两个数之间的差值) $\delta=2^{-F}$ represents the distance between successive representable fixed-point numbers. The **upper limit of the representable numbers** is $u=2^{W-F-1}-2^{-F}$ and the **lower limit** is $l=-2^{W-F-1}$.
 
 We write the quantization function as $Q_{\delta} : \mathbb{R} \rightarrow \mathbb{R}$ such that
-$$ Q_{\delta}(w)=\left\{\begin{array}{ll}{\operatorname{clip}\left(\delta\left\lfloor\frac{w}{\delta}\right\rfloor, l, u\right)} & {\text { w.p. (with probability) }\left\lceil\frac{w}{\delta}\right\rceil-\frac{w}{\delta}} \\ {\operatorname{clip}\left(\delta\left\lceil\frac{w}{\delta}\right\rceil, l, u\right)} & {\text { w.p. (with probability) } 1-\left(\left\lceil\frac{w}{\delta}\right\rceil-\frac{w}{\delta}\right)}\end{array}\right. \tag{1} $$
+$$ Q_{\delta}(w)=\{\begin{array}{ll}{\operatorname{clip}(\delta\lfloor\frac{w}{\delta}\rfloor, l, u)} & {\text { w.p. (with probability) }\lceil\frac{w}{\delta}\rceil-\frac{w}{\delta}} \\ {\operatorname{clip}(\delta\lceil\frac{w}{\delta}\rceil, l, u)} & {\text { w.p. (with probability) } 1-(\lceil\frac{w}{\delta}\rceil-\frac{w}{\delta})}\end{array}. \tag{1} $$
 where $\operatorname{clip}(x, l, u)=\max (\min (x, u), l)$.
 
 #### Block Floating Point (BFP) Quantization.
@@ -61,11 +61,9 @@ For deep learning experiments, **BFP is preferred over Fixed-Point** because BFP
 &emsp;&emsp;$\overline{w}_{0} \leftarrow w_{0}$ { Accumulator for SWA (high precision) }  
 &emsp;&emsp;$m \leftarrow 1$ { Number of models that have been averaged }  
 &emsp;&emsp;**for** $t=1,2, \ldots, T$ **do**  
-&emsp;&emsp;&emsp;&emsp;$w_{t} \leftarrow Q\left(w_{t-1}-\alpha \nabla \tilde{f}_{t}\left(w_{t-1}\right)\right)$ { Training with weight quantization;  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$w_{t}$ is stored in low precision }  
+&emsp;&emsp;&emsp;&emsp;$w_{t} \leftarrow Q\left(w_{t-1}-\alpha \nabla \tilde{f}_{t}\left(w_{t-1}\right)\right)$ { Training with weight quantization; $w_{t}$ is stored in low precision }  
 &emsp;&emsp;&emsp;&emsp;**if** $t \equiv 0(\bmod c)$ **then**  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$\overline{w}_{m} \leftarrow\left(\overline{w}_{m-1} \cdot m+w_{t}\right) /(m+1)$ { Update model with weight averaging  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;in high precision }  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$\overline{w}_{m} \leftarrow\left(\overline{w}_{m-1} \cdot m+w_{t}\right) /(m+1)$ { Update model with weight averaging in high precision }  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$m \leftarrow m+1$ { Increment model count }  
 &emsp;&emsp;&emsp;&emsp;**end if**  
 &emsp;&emsp;**end for**  
@@ -74,7 +72,7 @@ For deep learning experiments, **BFP is preferred over Fixed-Point** because BFP
 ---
 
 **Algorithm 2 —— SWALP with all numbers quantized during training.**  
-**Require:** $L$ layers DNN $\left\{f_{1}, \dots, f_{L}\right\}$; Scheduled learning rate $\alpha_{t}$ ;  
+**Require:** $L$ layers DNN $\{f_{1}, \dots, f_{L}\}$; Scheduled learning rate $\alpha_{t}$ ;  
 &emsp;&emsp;&emsp;&emsp;Momentum $\rho$; Initial weights $w_{0}^{(i)}, \forall l \in[1, L]$ ;  
 &emsp;&emsp;&emsp;&emsp;Total iterations $T$; Warm-up iterations $S$; Cycle length $c$ ;  
 &emsp;&emsp;&emsp;&emsp;Quantization functions $Q_{W}, Q_{A}, Q_{G}, Q_{E},$ and $Q_{M}$ ;  
@@ -102,4 +100,5 @@ For deep learning experiments, **BFP is preferred over Fixed-Point** because BFP
 
 
 [^1]: Izmailov, P., Podoprikhin, D., Garipov, T., Vetrov, D., and Wilson, A. G. Averaging weights leads to wider optima and better generalization. 2018a.
+
 [^2]: Song, Z., Liu, Z., Wang, C., and Wang, D. Computation error analysis of block floating point arithmetic oriented convolution neural network accelerator design. arXiv preprint arXiv:1709.07776, 2017.
