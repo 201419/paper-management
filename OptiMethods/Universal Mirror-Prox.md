@@ -12,7 +12,7 @@ https://arxiv.org/abs/1902.01637
 
 #### Preliminaries.
 
-Let ${\|\cdot\|}$ be a general norm and $\|\cdot\|_{*}$ be its **dual norm**, i.e. $\|z\|_{*}=\sup \left\{z^{T} x | \|x\| \leq 1\right\}$
+Let ${\|\cdot\|}$ be a general norm and $\|\cdot\|_{*}$ be its **dual norm**, i.e. $\|z\|_{*}=\sup \{z^{T} x | \|x\| \leq 1\}$
 
 A function $f : \mathcal{X} \mapsto \mathbb{R}$ is **$\mu$-strongly convex** over a convex set $\mathcal{K}$, if for any $x \in \mathcal{X}$ and any $\nabla f(x)$, a subgradient of $f$ at $x$, 
 $$ f(y) \geq f(x)+\nabla f(x) \cdot(y-x)+\frac{\mu}{2}\|x-y\|^{2} ; \quad \forall x, y \in \mathcal{X} $$
