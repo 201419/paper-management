@@ -7,9 +7,13 @@
 - [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN)
     1. Collection of PyTorch implementations of Generative Adversarial Networks (GANs) Varieties
 - WassersteinGAN：https://github.com/martinarjovsky/WassersteinGAN
+- [王飞跃：《人工智能研究的新前线：生成式对抗网络》](http://blog.sciencenet.cn/home.php?mod=space&uid=2374&do=blog&id=1130140)
 
 ### Paper-List
 
+- `1711-05914`：
+    1. https://arxiv.org/abs/1711.05914
+    2. How Generative Adversarial Networks and Their Variants Work: An Overview
 - `1406-2661`：
     1. http://arxiv.org/abs/1406.2661
     2. Generative Adversarial Networks
