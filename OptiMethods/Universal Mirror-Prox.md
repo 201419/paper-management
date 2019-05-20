@@ -12,7 +12,7 @@ https://arxiv.org/abs/1902.01637
 
 #### Preliminaries.
 
-Let ${\|\cdot\|}$ be a general norm and $\|\cdot\|_{*}$ be its **dual norm**, i.e. $\|z\|_{*}=\sup \{z^{T} x | \|x\| \leq 1\}$
+Let ${\|\cdot\|}$ be a general norm and $\|\cdot\|_{*}$ be its **dual norm**, i.e. $\|z\|_{*}=\sup \left\{z^{T} x\|x\| \leq 1\right\}$
 
 A function $f : \mathcal{X} \mapsto \mathbb{R}$ is **$\mu$-strongly convex** over a convex set $\mathcal{K}$, if for any $x \in \mathcal{X}$ and any $\nabla f(x)$, a subgradient of $f$ at $x$, 
 $$ f(y) \geq f(x)+\nabla f(x) \cdot(y-x)+\frac{\mu}{2}\|x-y\|^{2} ; \quad \forall x, y \in \mathcal{X} $$
@@ -54,7 +54,7 @@ $$ \Delta\left(x, x_{0}\right) :=\phi\left(u, v_{0}\right)-\phi\left(u_{0}, v\ri
 ### 3. Universal Mirror-Prox
 
 `Rakhlin and Sridharan (2013)`[^2] suggest to apply the following learning rate scheme inside Optimistic OGD 
-$$ \eta_{t}=D / \max \{\sqrt{\sum_{t=1}^{t-1}\|g_{t}-M_{t}\|^{2}}+\sqrt{\sum_{t=1}^{t-2}\|g_{t}-M_{t}\|^{2}}, 1\} $$
+$$ \eta_{t}=D / \max \left\{\sqrt{\sum_{t=1}^{t-1}\left\|g_{t}-M_{t}\right\|^{2}}+\sqrt{\sum_{t=1}^{t-2}\left\|g_{t}-M_{t}\right\|^{2}}, 1\right\} $$
 
 We suggest to use the following adaptive scheme
 $$ \eta_{t}=D / \sqrt{G_{0}^{2}+\sum_{\tau=1}^{t-1} Z_{\tau}^{2}}, \quad \text { where } Z_{\tau}^{2} :=\frac{\left\|x_{\tau}-y_{\tau}\right\|^{2}+\left\|x_{\tau}-y_{\tau-1}\right\|^{2}}{5 \eta_{\pi}^{2}} $$
@@ -66,10 +66,10 @@ $$ \eta_{t}=D / \sqrt{G_{0}^{2}+\sum_{\tau=1}^{t-1} Z_{\tau}^{2}}, \quad \text {
 **for** $t=1 \ldots T$ **do**  
 &emsp;&emsp; Set $M_{t}=F(y_{t-1})$  
 &emsp;&emsp; Updated:  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$x_{t}\leftarrow\underset{x\in\mathcal{K}}{\arg\min} M_{t} \cdot x+\frac{1}{\eta_{t}}\mathcal{D}_{\mathcal{R}}(x, y_{t-1}), \quad\text{and define } g_{t}:=F(x_{t})$  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$y_{t}\leftarrow\underset{x\in\mathcal{K}}{\arg\min} g_{t} \cdot x+\frac{1}{\eta_{t}}\mathcal{D}_{\mathcal{R}}(x, y_{t-1})$  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$x_{t} \leftarrow \underset{x \in \mathcal{K}}{\arg \min } M_{t} \cdot x+\frac{1}{\eta_{t}} \mathcal{D}_{\mathcal{R}}\left(x, y_{t-1}\right), \quad$ and define $g_{t} :=F\left(x_{t}\right)$  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$y_{t} \leftarrow \underset{x \in \mathcal{K}}{\arg \min } g_{t} \cdot x+\frac{1}{\eta_{t}} \mathcal{D}_{\mathcal{R}}\left(x, y_{t-1}\right)$  
 **end for**  
-**Output:** $\overline{x}_{T}=\frac{1}{T}\sum_{t=1}^{T}x_{t}$  
+**Output:** $\overline{x}_{T}=\frac{1}{T} \sum_{t=1}^{T} x_{t}$  
   
 
 

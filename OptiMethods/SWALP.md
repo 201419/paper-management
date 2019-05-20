@@ -37,7 +37,7 @@ In stochastic rounding, numbers are rounded up or down at random such that $\mat
 Explicitly, suppose we allocate $W$ bits to represent the quantized number and allocate $F$ of the $W$ bits to represent the fractional part (小数部分) of the number. The quantization gap (相邻两个数之间的差值) $\delta=2^{-F}$ represents the distance between successive representable fixed-point numbers. The **upper limit of the representable numbers** is $u=2^{W-F-1}-2^{-F}$ and the **lower limit** is $l=-2^{W-F-1}$.
 
 We write the quantization function as $Q_{\delta} : \mathbb{R} \rightarrow \mathbb{R}$ such that
-$$ Q_{\delta}(w)=\{\begin{array}{ll}{\operatorname{clip}(\delta\lfloor\frac{w}{\delta}\rfloor, l, u)} & {\text { w.p. (with probability) }\lceil\frac{w}{\delta}\rceil-\frac{w}{\delta}} \\ {\operatorname{clip}(\delta\lceil\frac{w}{\delta}\rceil, l, u)} & {\text { w.p. (with probability) } 1-(\lceil\frac{w}{\delta}\rceil-\frac{w}{\delta})}\end{array}. \tag{1} $$
+$$ Q_{\delta}(w)=\left\{\begin{array}{ll}{\operatorname{clip}\left(\delta\left\lfloor\frac{w}{\delta}\right\rfloor, l, u\right)} & {\text { w.p. }\left\lceil\frac{w}{\delta}\right\rceil-\frac{w}{\delta}} \\ {\operatorname{clip}\left(\delta\left\lceil\frac{w}{\delta}\right\rceil, l, u\right)} & {\text { w.p. } 1-\left(\left\lceil\frac{w}{\delta}\right\rceil-\frac{w}{\delta}\right)}\end{array}\right. \tag{1} $$
 where $\operatorname{clip}(x, l, u)=\max (\min (x, u), l)$.
 
 #### Block Floating Point (BFP) Quantization.
