@@ -22,12 +22,21 @@
 
 - `MobileNets`
     1. **《MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications》**
+    2. ArXiv：http://arxiv.org/abs/1704.04861
 - `ShuffleNet`
     1. **《ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices》**
+    2. ArXiv：http://arxiv.org/abs/1707.01083
 - `SqueezeNet`
     1. **《SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size》**
+    2. ArXiv：http://arxiv.org/abs/1602.07360
 - `XNOR-Net`
     1. **《XNOR-Net: ImageNet Classification Using Binary Convolutional Neural Networks》**
+    2. ArXiv：http://arxiv.org/abs/1603.05279
+
+- `AMC`
+    1. **《AMC: AutoML for Model Compression and Acceleration on Mobile Devices》**
+    2. ArXiv：http://arxiv.org/abs/1802.03494
+
 
 
 侯璐（香港科学技术大学）
