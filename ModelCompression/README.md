@@ -29,9 +29,11 @@
 - `SqueezeNet`
     1. **《SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size》**
     2. ArXiv：http://arxiv.org/abs/1602.07360
+    3. Code：https://github.com/DeepScale/SqueezeNet
 - `XNOR-Net`
     1. **《XNOR-Net: ImageNet Classification Using Binary Convolutional Neural Networks》**
     2. ArXiv：http://arxiv.org/abs/1603.05279
+    3. Code：http://allenai.org/plato/xnornet
 
 - `AMC`
     1. **《AMC: AutoML for Model Compression and Acceleration on Mobile Devices》**
