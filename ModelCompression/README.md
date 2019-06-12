@@ -18,8 +18,16 @@
     6. NeurIPS 2015：http://papers.nips.cc/paper/5647-binaryconnect-training-deep-neural-networks-with-binary-weights-during-propagations
 - `Distilling the Knowledge`
     1. **《Distilling the Knowledge in a Neural Network》**
-    2. NIPS 2014
-	3. ArXiv：https://arxiv.org/abs/1503.02531
+    2. ArXiv：https://arxiv.org/abs/1503.02531
+
+- `MobileNets`
+    1. **《MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications》**
+- `ShuffleNet`
+    1. **《ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices》**
+- `SqueezeNet`
+    1. **《SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size》**
+- `XNOR-Net`
+    1. **《XNOR-Net: ImageNet Classification Using Binary Convolutional Neural Networks》**
 
 
 侯璐（香港科学技术大学）
@@ -30,6 +38,7 @@
 - `Loss-Aware Weight Quantization`
     1. [Proceedings of the Sixth ICLR 2018]**《Loss-aware Weight Quantization of Deep Networks》**
     2. Code：https://github.com/houlu369/Loss-aware-weight-quantization
+
 
 相关博客：
 - 《五种CNN模型的尺寸，计算量和参数数量对比详解》
