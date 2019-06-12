@@ -9,8 +9,12 @@
     3. ICLR 2016 [Best Paper]：https://iclr.cc/archive/www/doku.php%3Fid=iclr2016:main.html
     4. Code：https://github.com/songhan/Deep-Compression-AlexNet
 
-- `Binarized Beural Networks`
-    1. NeurIPS 2016
+- `Binarized Neural Networks`
+    1. 《Binarized Neural Networks》
+	2. NeurIPS 2016：http://papers.nips.cc/paper/6573-binarized-neural-networks
+	3. 《Binarized neural networks: Training deep neural networks with weights and activations constrained to +1 or -1》
+	4. ArXiv：https://arxiv.org/abs/1602.02830
+
 
 侯璐（香港科学技术大学）
 - 个人主页：http://www.cse.ust.hk/~lhouab/
