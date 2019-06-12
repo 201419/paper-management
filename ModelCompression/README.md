@@ -10,10 +10,16 @@
     4. Code：https://github.com/songhan/Deep-Compression-AlexNet
 
 - `Binarized Neural Networks`
-    1. 《Binarized Neural Networks》
-	2. NeurIPS 2016：http://papers.nips.cc/paper/6573-binarized-neural-networks
-	3. 《Binarized neural networks: Training deep neural networks with weights and activations constrained to +1 or -1》
-	4. ArXiv：https://arxiv.org/abs/1602.02830
+    1. **《Binarized Neural Networks》**
+    2. NeurIPS 2016：http://papers.nips.cc/paper/6573-binarized-neural-networks
+    3. **《Binarized neural networks: Training deep neural networks with weights and activations constrained to +1 or -1》**
+    4. ArXiv：https://arxiv.org/abs/1602.02830
+    5. **《BinaryConnect: Training Deep Neural Networks with binary weights during propagations》**
+    6. NeurIPS 2015：http://papers.nips.cc/paper/5647-binaryconnect-training-deep-neural-networks-with-binary-weights-during-propagations
+- `Distilling the Knowledge`
+    1. **《Distilling the Knowledge in a Neural Network》**
+    2. NIPS 2014
+	3. ArXiv：https://arxiv.org/abs/1503.02531
 
 
 侯璐（香港科学技术大学）
