@@ -19,7 +19,7 @@ Sijia Liu
 
 - **《signSGD: Compressed Optimisation for Non-Convex Problems》**
     1. signSGD 收敛性分析，以及 majority vote
-    2. ArXiv：https://arxiv.org/pdf/1802.04434
+    2. ArXiv：https://arxiv.org/abs/1802.04434
 - **《signSGD via Zeroth-Order Oracle》**(ICLR 2019)
     1. signSGD 和 Zeroth-Order 的结合
     2. OpenReview：https://openreview.net/forum?id=BJe-DsC5Fm
@@ -33,4 +33,7 @@ Sijia Liu
 - 《Zeroth-Order Optimization and Its Application to Adversarial Machine Learning》
 - 《Zeroth-Order Stochastic Projected Gradient Descent for Nonconvex Optimization》
 
+
+- **《Stochastic First- and Zeroth-order Methods for Nonconvex Stochastic Programming》**
+    1. ArXiv：https://arxiv.org/abs/1309.5549
 
