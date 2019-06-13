@@ -11,19 +11,26 @@
 - 《Accelerating Stochastic Gradient Descent using Predictive Variance Reduction》—— ZhangTong
 - 《Dissecting Adam: The Sign, Magnitude and Variance of Stochastic Gradients》
 
-**Sign**
+
+Sijia Liu
+- Research Staff Member / MIT-IBM Watson AI Lab / IBM Research
+- 个人主页：http://sliu17.mysite.syr.edu/ 
+
+
 - **《signSGD: Compressed Optimisation for Non-Convex Problems》**
     1. signSGD 收敛性分析，以及 majority vote
     2. ArXiv：https://arxiv.org/pdf/1802.04434
 - **《signSGD via Zeroth-Order Oracle》**(ICLR 2019)
     1. signSGD 和 Zeroth-Order 的结合
     2. OpenReview：https://openreview.net/forum?id=BJe-DsC5Fm
+- **《Zeroth-Order Stochastic Variance Reduction for Nonconvex Optimization》**
+    1. Zeroth-Order 和 Variance Reduction 结合
+    2. NeurIPS 2018：https://papers.nips.cc/paper/7630-zeroth-order-stochastic-variance-reduction-for-nonconvex-optimization
 
 
 **Zeroth-Order**
 - 《Zeroth-Order Online Alternating Direction Method of Multipliers: Convergence Analysis and Applications》
 - 《Zeroth-Order Optimization and Its Application to Adversarial Machine Learning》
-- 《Zeroth-Order Stochastic Variance Reduction for Nonconvex Optimization》
 - 《Zeroth-Order Stochastic Projected Gradient Descent for Nonconvex Optimization》
 
 
